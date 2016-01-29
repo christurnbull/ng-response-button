@@ -12,7 +12,17 @@
 angular.module('ngResponseButton', [])
   .directive('ngResponseButton', ['$compile', '$timeout', function($compile, $timeout) {
     return {
-      templateUrl: 'ngResponseButton.html',
+      template: [
+        '<span>{{innerHTML}}</span>',
+        '<div class="ng-response-button-ion-spinner-container ng-response-button-busy" ng-if="state==\'busy\' && ionic">',
+        '<div class="ng-response-button-ion-spinner">',
+        '<ion-spinner icon="{{ionSpinnerI}}" ng-class="spinnerClass"></ion-spinner>',
+        '</div>',
+        '</div>',
+        '<span class="ng-response-button-busy" ng-if="state==\'busy\' && !ionic">&nbsp;&nbsp;<i class="{{spinnerClassI}}"></i></span>',
+        '<span class="ng-response-button-success" ng-if="state==\'success\'">&nbsp;&nbsp;<i class="{{successIconClass}}"></i></span>',
+        '<span class="ng-response-button-fail" ng-if="state==\'fail\'">&nbsp;&nbsp;<i class="{{failIconClass}}"></i></span>'
+      ].join(''),
       transclude: true,
       restrict: 'A',
       templateNamespace: 'html',
