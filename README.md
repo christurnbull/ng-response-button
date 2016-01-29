@@ -2,7 +2,7 @@
 
 Use a button to call a promise and show a repsonse in the button once resolved
 
-Works with or without ngAnimate, Bootstrap, Ionic, Font Awesome
+Works with or without ngAnimate, Bootstrap, Ionic, Font Awesome. Supports ngResource and handles form submit
 
 DEMO: http://embed.plnkr.co/tkIaMwnhYmINgzoHz9D8/
 
