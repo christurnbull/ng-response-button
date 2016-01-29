@@ -1,0 +1,74 @@
+.ng-response-button {
+  -webkit-transition: 0.3s linear all;
+  transition: 0.3s linear all;
+}
+
+.ng-response-button-success.ng-leave {
+  -webkit-transition: 0.3s linear all;
+  transition: 0.3s linear all;
+}
+
+.ng-response-button-success.ng-leave.ng-leave-active {
+  opacity: 0;
+}
+
+.ng-response-button-fail.ng-leave {
+  -webkit-transition: 0.3s linear all;
+  transition: 0.3s linear all;
+}
+
+.ng-response-button-fail.ng-leave.ng-leave-active {
+  opacity: 0;
+}
+
+
+/* Ionic spinner */
+
+.ng-response-button-ion-spinner-container {
+  display: inline-block;
+  padding-left: 5px;
+  width: 30px;
+}
+
+.ng-response-button-ion-spinner {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 85px;
+  text-align: center;
+}
+
+.ng-response-button-ion-spinner svg {
+  height: 85px !important;
+}
+
+
+/* Bootstrap spinner */
+
+.ng-response-button-spin {
+  -webkit-animation: ng-response-button-spin 1000ms infinite linear;
+  animation: ng-response-button-spin 1000ms infinite linear;
+}
+
+@-webkit-keyframes ng-response-button-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes ng-response-button-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
