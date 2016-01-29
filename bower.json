@@ -13,7 +13,7 @@
     "angular",
     "directive",
     "button",
-    "promise",
+    "promise"
   ],
   "authors": [
     "Chris Turnbull"
