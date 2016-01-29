@@ -48,9 +48,26 @@ angular.module('ngResponseButton', [])
               var cl, list = [];
               for (var i = 0; i < iElement[0].classList.length; i++) {
                 cl = iElement[0].classList[i];
-                if (cl.indexOf('btn-') >= 0 || cl.indexOf('button-') >= 0) {
-                  list.push(cl);
-                  iElement.removeClass(cl);
+                switch (cl) {
+                  case 'btn-default':
+                  case 'btn-primary':
+                  case 'btn-success':
+                  case 'btn-info':
+                  case 'btn-warning':
+                  case 'btn-danger':
+                  case 'btn-link':
+                  case 'button-light':
+                  case 'button-stable':
+                  case 'button-positive':
+                  case 'button-calm':
+                  case 'button-balanced':
+                  case 'button-energized':
+                  case 'button-assertive':
+                  case 'button-royal':
+                  case 'button-dark':
+                    list.push(cl);
+                    iElement.removeClass(cl);
+                    break;
                 }
               }
               return list;
