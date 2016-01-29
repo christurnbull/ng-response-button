@@ -39,10 +39,12 @@ All options
   success-icon="glyphicon glyphicon-thumbs-up"
   fail-icon="fa fa-frown-o"
   spinner-class="glyphicon glyphicon-minus"
+  type="button"
+  submit="form"
   ion-spinner="dots" 
   spinner-class="spinner-energized"
   >
-  Ionic Button
+  Submit Ionic Form
 </button>
 ```
 
