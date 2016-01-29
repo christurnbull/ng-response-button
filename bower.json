@@ -1,0 +1,31 @@
+{
+  "name": "ng-response-button",
+  "version": "0.1.0",
+  "description": "Use a button to call a promise and show a repsonse in the button once resolved",
+  "main": [
+    "ngResponseButton.js",
+    "ngResponseButton.css"
+  ],
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "angular",
+    "directive",
+    "button",
+    "promise",
+  ],
+  "authors": [
+    "Chris Turnbull"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/christurnbull/ng-response-button",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  }
+}
