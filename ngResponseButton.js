@@ -13,7 +13,6 @@ angular.module('ngResponseButton', [])
   .directive('ngResponseButton', ['$compile', '$timeout', function($compile, $timeout) {
     return {
       template: [
-        '<span>{{innerHTML}}</span>',
         '<div class="ng-response-button-ion-spinner-container ng-response-button-busy" ng-if="state==\'busy\' && ionic">',
         '<div class="ng-response-button-ion-spinner">',
         '<ion-spinner icon="{{ionSpinnerI}}" ng-class="spinnerClass"></ion-spinner>',
@@ -37,10 +36,10 @@ angular.module('ngResponseButton', [])
         spinnerClass: '@',
         submit: '='
       },
-      compile: function compile(tElement, tAttrs, transclude) {
+      compile: function compile(tElement, tAttrs, tTransclude) {
         return {
           pre: function preLink(scope, iElement, iAttrs, controller) {},
-          post: function postLink(scope, iElement, iAttrs, controller) {
+          post: function postLink(scope, iElement, iAttrs, controller, transclude) {
 
 
             function removeClasses() {
@@ -167,9 +166,9 @@ angular.module('ngResponseButton', [])
                   }, revert);
                 });
             });
-
-            transclude(scope, function(clone) {
-              scope.innerHTML = clone[0].innerHTML;
+            
+            transclude(function(clone) {
+              iElement.prepend(clone);
               $compile(iElement.contents())(scope);
             });
 
